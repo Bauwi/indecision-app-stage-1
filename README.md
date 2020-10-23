@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting started
 
-## Available Scripts
+Find the root directory of your project and navigate to it through your terminal.
 
-In the project directory, you can run:
+```bash
+# list the the files of your current directory
+ls
+```
 
-### `npm start`
+```bash
+# change to the 'code/indecision-app' directory
+cd code/indecision-app
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+For a detailed explanation,
+[see Here](https://openclassrooms.com/en/courses/4614926-learn-the-command-line-in-terminal/4634356-navigate-your-system)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Run your development server:
 
-### `npm test`
+```
+npm run start
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Check [localhost:3000](http://localhost:3000), You're good to go !
 
-### `npm run build`
+## Additional features
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For training purposes, here are some possible additional features.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+You may implement them on a new branch to keep `master` clean for indecision app stage 2.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Sad message if bot is lazy :(
 
-### `npm run eject`
+At refresh, there is no task selected and this message is displayed:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`Bot assigned you : -- No task selected yet --`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Replace this message by a custom one :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`This bot seems lazy. Click the button to let magic happen !`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+tips:
 
-## Learn More
+- The condition stay the same
+- Mainly a question of JSX / curly brackets wrapping
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Task description
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Each task should have a proper description in addition of `name` and `id`.
 
-### Code Splitting
+- Add a description below the `name` in the task list.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Add an input in the AddTask form.
 
-### Analyzing the Bundle Size
+tips:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Don't forget to update the mocks data
+- Use a new `useState` to store the value of the new input in the form, and the function to change that value.
 
-### Making a Progressive Web App
+### Not the same task twice in a row
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Prevent bot to assign the user the same task twice in a row.
